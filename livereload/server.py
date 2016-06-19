@@ -127,7 +127,7 @@ class Server(object):
             (r'/livereload.js', LiveReloadJSHandler)
         ]
         live = web.Application(handlers=live_handlers, debug=False)
-        live.listen(liveport, address=host)
+        live.listen(liveport)
 
     def serve(self, liveport=None, host=None, restart_delay=2):
         """Start serve the server with the given port.
